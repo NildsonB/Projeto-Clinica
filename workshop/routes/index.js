@@ -14,4 +14,8 @@ router.get('/cadastromed', (req, res) => {
   res.render('cadastromed', {title: 'Cadastro de Medicos', action:""})
 })
 
+router.get('/cadastroplano', (req, res) => {
+  res.render('cadastroplano', {title: 'Cadastro de Plano de Saúde', action:""})
+})
+
 module.exports = router;
