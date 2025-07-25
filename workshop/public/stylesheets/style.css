@@ -1,8 +1,54 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-a {
-  color: #00B7FF;
+body{
+  font-family: "Litel Haabler";
+  color: #404040;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-color: #404040;
+}
+
+form{
+  padding: 50px;
+  background-color: white;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+h1{
+  font-size: 24px;
+}
+
+.campo-input{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.lembrar-me{
+  display: flex;
+  gap: 5px;
+}
+
+button{
+  padding: 10px;
+  align-self: center;
+  width: 160px;
+  border-radius: 30px;
+  background-image: linear-gradient(#E61515, #FA3116);
+  border: solid 1px #E61515;
+  border-right-width: 4px;
+  border-bottom-width: 4px;
+  font-size: 16px;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 700;
 }

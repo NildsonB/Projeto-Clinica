@@ -5,12 +5,26 @@
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
+    <form action="">
+    <h1>Faça seu login</h1>
+    <div class="campo-input">
+      <label for="email">Seu e-mail*</label>
+      <input type="email" name="email">
+    </div>
+    <div class="campo-input">
+      <label for="senha">Sua senha*</label>
+      <input type="password" name="senha">
+    </div>
+    <div class="lembrar-me">
+      <input type="checkbox">
+      <p>Lembrar-me</p>
+    </div>
+    <button>Entrar</button>
     <tr>
       <td>
-        <a href="/cadastro">Cadastro</a>
+        <a href="/cadastro">Cadastrar-se</a>
       </td>
     </tr>
+    </form>
   </body>
 </html>
