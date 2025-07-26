@@ -75,7 +75,17 @@ router.get('/financeiro', (req, res) => {
   try {
     const resulmo = //Chamada da função ligada ao gbds que lista o resulmo financeiro;
     console.log(resulmo);
-    res.render('finaceiro', {title: 'Resulmo Financeiro', action:""})
+    res.render('finaceiro', {title: 'Resulmo Financeiro', action:""});
+  } catch (error) {
+    res.render('/erro=' + error);
+  }
+})
+//Página de view de consultas
+router.get('/consultas', (req, res) => {
+  try {
+    const consultas = //Chamada da função ligada ao gbds que lista as consultas;
+    console.log(consultas);
+    res.render('consultas', {title: 'Lista de Consultas', action:""});
   } catch (error) {
     res.render('/erro=' + error);
   }
