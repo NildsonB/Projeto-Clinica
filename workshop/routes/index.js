@@ -17,8 +17,9 @@ router.post('/cadastro', (req, resp) => {
   const endereco = req.body.endereco;
   try {
     //Parte que receberá a incorporação com SGBD
+    res.redirect('/cadastro?cadastro=true') //Confirmação em tela de cadastro bem-sucedido
   } catch (error) {
-    res.redireci('/erro=' + error);
+    res.redireci('/erro=' + error); //Aviso em tela caso cadastro mal-sucedido
   }
 })
 //Página de cadastro de médicos
@@ -35,8 +36,9 @@ router.post('/cadastromed', (req, res) => {
   const especialidade = req.body.especialidade;
   try {
     //Parte que receberá a incorporação com SGBD
+    res.redirect('/cadastromed?cadastromed=true') //Confirmação em tela de cadastro bem-sucedido
   } catch (error) {
-    res.redirect('/erro=' + error);
+    res.redirect('/erro=' + error); //Aviso em tela caso cadastro mal-sucedido
   }
 })
 //Página de cadastro do plano de saúde
@@ -50,8 +52,9 @@ router.post('/cadastroplano', (req, res) => {
   const validade = req.body.validade;
   try {
     //Parte que receberá a incorporação com SGBD
+    res.redirect('/cadastroplano?cadastroplano=true') //Confirmação em tela de cadastro bem-sucedido
   } catch (error) {
-    res.redirect('/erro=' + error);
+    res.redirect('/erro=' + error); //Aviso em tela caso cadastro mal-sucedido
   }
 })
 //Página para agendadmento da consulta
@@ -64,10 +67,16 @@ router.post('/agendamento', (req, res) => {
   const medico = req.body.medico;
   const valor = req.body.valor;
   const especialidade = req.body.especialidade;
-  try {
-    //Parte que receberá a incorporação com SGBD
-  } catch (error) {
-    res.redirect('/erro=' + error);
+  const plano = req.body.plano;
+  if(data < /*fução que chama a data do plano selecionado*/a){
+    try {
+      //Parte que receberá a incorporação com SGBD
+      res.redirect('/agendamento?agendamento=true') //Confirmação na tela caso o agendamento tenha sido feito
+    } catch (error) {
+      res.redirect('/erro=' + error);
+    }
+  }else{
+    res.redirect('/erro=' + error); //Informação na teda de que o validade do plano já expirou
   }
 })
 //Página de resulmo financeiro
