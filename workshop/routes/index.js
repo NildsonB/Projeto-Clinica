@@ -43,5 +43,16 @@ router.post('/cadastromed', (req, res) => {
 router.get('/cadastroplano', (req, res) => {
   res.render('cadastroplano', {title: 'Cadastro de Plano de Saúde', action:""})
 })
+//POST para cadastro de plano de saúde
+router.post('/cadastroplano', (req, res) => {
+  const plano = req.body.plano;
+  const cobertura = req.body.cobertura;
+  const validade = req.body.validade;
+  try {
+    //Parte que receberá a incorporação dom BDS
+  } catch (error) {
+    res.redirect('/erro=' + error);
+  }
+})
 
 module.exports = router;
