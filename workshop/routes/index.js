@@ -16,7 +16,7 @@ router.post('/cadastro', (req, resp) => {
   const fone = parseInt(req.body.telefone);
   const endereco = req.body.endereco;
   try {
-    //Parte que receberá a incorporação com BDS
+    //Parte que receberá a incorporação com SGBD
   } catch (error) {
     res.redireci('/erro=' + error);
   }
@@ -34,7 +34,7 @@ router.post('/cadastromed', (req, res) => {
   const crm = req.body.crm;
   const especialidade = req.body.especialidade;
   try {
-    //Parte que receberá a incorporação com BDS
+    //Parte que receberá a incorporação com SGBD
   } catch (error) {
     res.redirect('/erro=' + error);
   }
@@ -49,7 +49,23 @@ router.post('/cadastroplano', (req, res) => {
   const cobertura = req.body.cobertura;
   const validade = req.body.validade;
   try {
-    //Parte que receberá a incorporação dom BDS
+    //Parte que receberá a incorporação com SGBD
+  } catch (error) {
+    res.redirect('/erro=' + error);
+  }
+})
+//Página para agendadmento da consulta
+router.get('/agendamento', (req, res) => {
+  res.render('agendamento', {title: 'Agendamento de consulta', action:""})
+})
+//POST para o agendamento de consulta
+router.post('/agendamento', (req, res) => {
+  const data = req.body.data;
+  const medico = req.body.medico;
+  const valor = req.body.valor;
+  const especialidade = req.body.especialidade;
+  try {
+    //Parte que receberá a incorporação com SGBD
   } catch (error) {
     res.redirect('/erro=' + error);
   }
