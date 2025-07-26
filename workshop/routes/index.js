@@ -70,5 +70,16 @@ router.post('/agendamento', (req, res) => {
     res.redirect('/erro=' + error);
   }
 })
+//Página de resulmo financeiro
+router.get('/financeiro', (req, res) => {
+  try {
+    const resulmo = //Chamada da função ligada ao gbds que lista o resulmo financeiro;
+    console.log(resulmo);
+    res.render('finaceiro', {title: 'Resulmo Financeiro', action:""})
+  } catch (error) {
+    res.render('/erro=' + error);
+  }
+})
+
 
 module.exports = router;
